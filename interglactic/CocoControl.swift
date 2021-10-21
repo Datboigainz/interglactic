@@ -7,12 +7,18 @@
 
 import UIKit
 
-class CocoControl: UIViewController {
+class CocoControl: UIViewController
+{
 
+    
+    
+    @IBOutlet weak var starImage: UIImageView!
+    var starsName = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        starImage.image = UIImage(named: starsName)
     }
     
 

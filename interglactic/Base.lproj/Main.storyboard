@@ -24,6 +24,9 @@
                                 <state key="normal" title="Red Dwarf Stars">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="SCB-sJ-elT" kind="show" identifier="redSegue" id="GgI-jd-MjW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnn-br-dhM">
                                 <rect key="frame" x="131" y="433" width="166" height="30"/>
@@ -47,17 +50,26 @@
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="75"/>
         </scene>
-        <!--View Controller-->
+        <!--Coco Control-->
         <scene sceneID="M2s-9b-uOS">
             <objects>
-                <viewController id="SCB-sJ-elT" sceneMemberID="viewController">
+                <viewController id="SCB-sJ-elT" customClass="CocoControl" customModule="interglactic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VC5-gZ-mG4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1I2-rH-xZv">
+                                <rect key="frame" x="87" y="251" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="PUH-hG-Zev"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Twe-Wd-6R0"/>
+                    <connections>
+                        <outlet property="starImage" destination="1I2-rH-xZv" id="xHh-4o-b91"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N1q-v5-pXV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,6 +94,9 @@
             <point key="canvasLocation" x="131.8840579710145" y="75"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GgI-jd-MjW"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
